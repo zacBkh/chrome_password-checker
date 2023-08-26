@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Checker</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="text-base">
+    <!-- HEADER -->
+    <header class="bg-[#fead36] p-4 w-[450px] flex justify-between">
+      <div class="flex items-center gap-x-3">
+        <img src="/images/icon-banner.png" alt="Extension Icon" />
+        <div class="flex flex-col text-white">
+          <h1 class="font-semibold text-lg">Password Checker</h1>
+          <h2 class="text-sm">Stop making hackers' life easy, forever.</h2>
+        </div>
+      </div>
+
+      <div class="flex items-center">
+        <a
+          href="https://github.com/zacBkh"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="w-6 fill-current"
+            src="/images/svg/github.svg"
+            alt="GitHub icon"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- BODY -->
+    <div class="p-4 flex flex-col gap-y-4 items-center">
+      <div class="password-toggle flex items-center relative w-[75%]">
+        <input
+          class="border border-gray-200 py-1 px-2 w-full rounded-md"
+          type="password"
+          id="passwordInput"
+          placeholder="Password"
+        />
+
+        <div class="flex items-center gap-x-3 absolute right-4 bg-white">
+          <button id="copyBtn">
+            <img
+              class="w-4"
+              src="/images/svg/copy.svg"
+              alt="Copy the password"
+            />
+          </button>
+          <button id="togglePasswordVisibility">
+            <img
+              class="w-4"
+              src="/images/svg/eye-close.svg"
+              alt="Toggle password visibility icon"
+            />
+          </button>
+        </div>
+      </div>
+
+      <!-- PROGRESS BAR -->
+      <div class="px-4 flex flex-col items-center w-full">
+        <p id="result" class="font-semibold"></p>
+
+        <div class="progress-bar">
+          <div
+            class="progress-bar-fill transition-all"
+            id="progressBarFill"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../dist/popup.js"></script>
+    <script type="module" src="../dist/toggle-password.js"></script>
+    <script type="module" src="../dist/copy-to-clipboard.js"></script>
+  </body>
+</html>
