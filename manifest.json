@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Password Checker",
   "version": "1.0",
-  "description": "Know your password strength, without the tears.",
+  "description": "Stop making hackers' life easy, forever.",
 
   "action": {
     "default_popup": "popup/popup.html",
