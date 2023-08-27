@@ -3,6 +3,27 @@
   "name": "Password Checker",
   "version": "1.0",
   "description": "Stop making hackers' life easy, forever.",
+  "permissions": ["activeTab"],
+
+  "background": {
+    "service_worker": "dist/service_worker.js",
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["dist/scripts/content.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["images/icon-16.png", "dialog.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
 
   "action": {
     "default_popup": "popup/popup.html",

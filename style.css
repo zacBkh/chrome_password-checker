@@ -18,3 +18,14 @@ body {
   height: 100%;
   border-radius: 10px;
 }
+
+.iconClass {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  z-index: 99999;
+  background-position: center;
+  background-repeat: no-repeat !important;
+  background-size: cover;
+}
